@@ -9,7 +9,7 @@ def ocrapi(imagestream, API_KEY, SECRET_KEY):
     '''
     调用百度云OCR API进行验证码破解    
     '''
-    request_url = 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic'
+    request_url = 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic' #使用通用文字识别（标准版）
     host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={}&client_secret={}'.format(API_KEY, SECRET_KEY)
     response = requests.get(host)
     if response:
