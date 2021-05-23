@@ -95,7 +95,7 @@ headers =  {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gec
 number =  #学号
 card =  #密码
 
-#打卡基础信息，请自行查阅JS代码填写
+#打卡基础信息，请自行运行脚本
 basicinfo = 
 
 #以下内容请自行查阅百度智慧云控制台
