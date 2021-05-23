@@ -12,11 +12,11 @@
 <p align="center">
   <img src="https://z3.ax1x.com/2021/05/23/gXajMT.png" />
 </p>
-4. 点击F12后，打开 `Network` 选项卡 
+4. 点击F12后，打开 <code>Network</code> 选项卡 
 <a href="https://imgtu.com/i/gXd2TJ"><img src="https://z3.ax1x.com/2021/05/23/gXd2TJ.png" alt="gXd2TJ.png" border="0" /></a>
-5. 点击 `handle_ext_do` file,在左侧的弹出窗口选择 `Request` ,再点击 `Raw` ，复制字符串
+5. 点击 `handle_ext_do` file,在左侧的弹出窗口选择 <code>Request</code>,再点击 <code>Raw</code> ，复制字符串
 <a href="https://imgtu.com/i/gXwi7Q"><img src="https://z3.ax1x.com/2021/05/23/gXwi7Q.png" alt="gXwi7Q.png" border="0" /></a>
-6. 删除`verify=1111`,剩余部分输入 `main.py` 中的指定位置
+6. 删除<code>verify=1111</code>,剩余部分输入 <code>main.py</code>中的指定位置
 
 ```python
 #打卡基础信息，请自行查阅JS代码填写
