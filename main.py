@@ -89,7 +89,7 @@ def register(cookies,headers, basicinfo):
 
 
 headers =  {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0','Referer':'http://bcfl.sdufe.edu.cn/index/login.html', 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8','X-Requested-With':'XMLHttpRequest','Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8','Host':'bcfl.sdufe.edu.cn','Accept': '*/*'}
-#cookies = {'cookies':'4BBnnC_think_language=en;PHPSESSID=b120725ab5eb12b9969ea32e0c9428c5'}
+
 
 #以下内容请自行修改
 number =  #学号
