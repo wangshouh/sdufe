@@ -91,20 +91,18 @@ def register(cookies,headers, basicinfo):
 headers =  {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0','Referer':'http://bcfl.sdufe.edu.cn/index/login.html', 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8','X-Requested-With':'XMLHttpRequest','Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8','Host':'bcfl.sdufe.edu.cn','Accept': '*/*'}
 
 
-#以下内容请自行修改
-number =  #学号
-card =  #密码
-
-#打卡基础信息，请自行运行脚本
-basicinfo = 
-
 #以下内容请自行查阅百度智慧云控制台
 API_KEY = 
 SECRET_KEY = 
 
+with open(r'multiuser.json') as f:
+    userinfos = json.load(f)
+    
+for userinfo in userinfos:
+    number = userinfo['number']
+    card = userinfo['card']
+    basicinfo = userinfo['basicinfo']
+    cookies = getcookie(headers)
+    login(cookies,headers, number, card)
+    register(cookies,headers, basicinfo)
 
-
-
-cookies = getcookie(headers)
-login(cookies,headers, number, card)
-register(cookies,headers, basicinfo)
