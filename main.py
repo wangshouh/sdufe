@@ -91,7 +91,7 @@ def logger(number):
     t = time.localtime()
     current_time = time.strftime("%m-%d %H:%M:%S", t)
     with open('log.txt', 'a') as f:
-        f.write(current_time + ' ' + number + 'finished' + '\n')
+        f.write(current_time + ' ' + number + ' ' + 'finished' + '\n')
     
 
 headers =  {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0','Referer':'http://bcfl.sdufe.edu.cn/index/login.html', 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8','X-Requested-With':'XMLHttpRequest','Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8','Host':'bcfl.sdufe.edu.cn','Accept': '*/*'}
