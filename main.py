@@ -90,8 +90,18 @@ def register(cookies,headers, basicinfo):
 def logger(number):
     t = time.localtime()
     current_time = time.strftime("%m-%d %H:%M:%S", t)
-    with open('log.txt', 'a') as f:
-        f.write(current_time + ' ' + number + ' ' + 'finished' + '\n')
+    retuen current_time + ' ' + number + ' ' + 'finished'
+        
+def weixin(content):
+    '''
+    微信消息推送
+    '''
+    headers = {"Content-Type": "application/json"}
+    url = 'http://wxpusher.zjiecode.com/api/send/message'
+    with open("massage.json", "r") as f:
+        message = json.load(f)
+    message['content'] = content
+    r = requests.post(url, json=message, headers=headers)      
     
 
 headers =  {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0','Referer':'http://bcfl.sdufe.edu.cn/index/login.html', 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8','X-Requested-With':'XMLHttpRequest','Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8','Host':'bcfl.sdufe.edu.cn','Accept': '*/*'}
@@ -111,5 +121,5 @@ for userinfo in userinfos:
     cookies = getcookie(headers)
     login(cookies,headers, number, card)
     register(cookies,headers, basicinfo)
-    logger(number)
+    weixin(logger(number))
 
